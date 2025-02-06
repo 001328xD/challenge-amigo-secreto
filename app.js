@@ -1,13 +1,18 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let listaAmigos = []
-let esInvalido = true
+
 
 function validarEntrada(dato){
-    if (dato==""){
-        alert("Por favor ingrese un nombre");
-    } else {
-        esInvalido=true;
+    let esInvalido = true
+    while (esInvalido){
+        if (dato==""){
+            alert("Por favor ingrese un nombre");
+            break;
+        } else {
+            esInvalido=false;
+        }
     }
+    return esInvalido;
 }
 
 function capturarNombre(){
@@ -17,11 +22,8 @@ function capturarNombre(){
 
 function agregarAmigo(){
     amigo=capturarNombre();
-    console.log(amigo)
-    console.log(typeof(amigo))
-    /*while (esInvalido) {
-        validarEntrada(amigo)
-    };
-    listaAmigos.push(amigo)
-    console.log(listaAmigos)*/
+    if (!validarEntrada(amigo)) {
+        listaAmigos.push(amigo);
+        console.log(listaAmigos);
+    }
 }
