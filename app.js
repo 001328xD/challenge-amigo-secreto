@@ -51,3 +51,8 @@ function agregarAmigo(){
     limpiarCampo();
 }
 
+function sortearNumero(lista){
+    numero = Math.random().floor()*lista.length
+    return numero;
+}
+
