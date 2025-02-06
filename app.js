@@ -20,6 +20,11 @@ function limpiarCampo(){
     campo.value = ""
 }
 
+function limpiarLista(){
+    lista = document.getElementById("listaAmigos");
+    lista.innerHTML("")
+}
+
 function capturarNombre(){
     nombre = document.getElementById("amigo").value;
     return nombre;
@@ -33,3 +38,4 @@ function agregarAmigo(){
     }
     limpiarCampo();
 }
+
