@@ -15,6 +15,11 @@ function validarEntrada(dato){
     return esInvalido;
 }
 
+function limpiarCampo(){
+    campo = document.getElementById("amigo");
+    campo.value = ""
+}
+
 function capturarNombre(){
     nombre = document.getElementById("amigo").value;
     return nombre;
@@ -26,4 +31,5 @@ function agregarAmigo(){
         listaAmigos.push(amigo);
         console.log(listaAmigos);
     }
+    limpiarCampo();
 }
