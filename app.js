@@ -5,7 +5,7 @@ let listaAmigos = []
 function validarEntrada(dato){
     let esInvalido = true
     while (esInvalido){
-        if (dato==""){
+        if (dato=="" || dato.trim().length == 0){
             alert("Por favor ingrese un nombre");
             break;
         } else {
