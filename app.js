@@ -76,9 +76,7 @@ function sortearAmigo(){
     console.log(hayAmigo(listaAmigos))
     if (hayAmigo(listaAmigos)){
         let numeroSorteado = sortearNumero(listaAmigos);
-        console.log(numeroSorteado)
         let amigoSorteado = listaAmigos[numeroSorteado-1];
-        console.log(amigoSorteado);
         mostrarResultado(amigoSorteado)
     } else {
         alert("No hay amigos para sortear, por favor ingreselos.")
