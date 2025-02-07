@@ -64,12 +64,22 @@ function sortearNumero(lista){
     return numero;
 }
 
+function mostrarResultado(amigo){
+    resultPlaceholder = document.getElementById("resultado")
+    let amigoSorteado = document.createElement('li')
+    amigoSorteado.textContent="Felicitaciones! El amigo secreto es "+ amigo
+    resultPlaceholder.appendChild(amigoSorteado)
+}
+
 function sortearAmigo(){
     limpiarLista();
+    console.log(hayAmigo(listaAmigos))
     if (hayAmigo(listaAmigos)){
         let numeroSorteado = sortearNumero(listaAmigos);
-        let amigoSorteado = listaAmigos[numeroSorteado];
+        console.log(numeroSorteado)
+        let amigoSorteado = listaAmigos[numeroSorteado-1];
         console.log(amigoSorteado);
+        mostrarResultado(amigoSorteado)
     } else {
         alert("No hay amigos para sortear, por favor ingreselos.")
     }    
