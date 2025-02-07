@@ -46,9 +46,6 @@ function agregarAmigo(){
     if (!validarEntrada(amigo)) {
         listaAmigos.push(amigo);
         agregarAListaLi(listaAmigos)
-        console.log(listaAmigos);
-        let numeroSecreto = sortearNumero(listaAmigos)
-        console.log(numeroSecreto);
     }
     limpiarCampo();
 }
@@ -58,3 +55,9 @@ function sortearNumero(lista){
     return numero;
 }
 
+function sortearAmigo(){
+    limpiarLista();
+    let numeroSorteado=sortearNumero(listaAmigos);
+    let amigoSorteado = listaAmigos[numeroSorteado];
+    console.log(amigoSorteado);
+}
