@@ -47,12 +47,14 @@ function agregarAmigo(){
         listaAmigos.push(amigo);
         agregarAListaLi(listaAmigos)
         console.log(listaAmigos);
+        let numeroSecreto = sortearNumero(listaAmigos)
+        console.log(numeroSecreto);
     }
     limpiarCampo();
 }
 
 function sortearNumero(lista){
-    numero = Math.random().floor()*lista.length
+    numero = Math.floor((Math.random()*lista.length)+1)
     return numero;
 }
 
