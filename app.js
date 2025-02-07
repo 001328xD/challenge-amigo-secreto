@@ -41,6 +41,15 @@ function capturarNombre(){
     return nombre;
 }
 
+function hayAmigo(lista){
+    let hayAmigo = false;
+
+    if (lista.length!=0){
+        hayAmigo = true
+    }
+    return hayAmigo;
+}
+
 function agregarAmigo(){
     amigo=capturarNombre();
     if (!validarEntrada(amigo)) {
@@ -57,7 +66,11 @@ function sortearNumero(lista){
 
 function sortearAmigo(){
     limpiarLista();
-    let numeroSorteado=sortearNumero(listaAmigos);
-    let amigoSorteado = listaAmigos[numeroSorteado];
-    console.log(amigoSorteado);
+    if (hayAmigo(listaAmigos)){
+        let numeroSorteado = sortearNumero(listaAmigos);
+        let amigoSorteado = listaAmigos[numeroSorteado];
+        console.log(amigoSorteado);
+    } else {
+        alert("No hay amigos para sortear, por favor ingreselos.")
+    }    
 }
